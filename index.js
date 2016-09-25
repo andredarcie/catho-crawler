@@ -8,27 +8,26 @@ request('http://www.catho.com.br/vagas/por-cargo/view/profissional/51/', functio
 
   var list = [];
   var total = 0;
-  var totalx = 0;
 
   $('td').each(function(index){
     var title = $(this).find('h3').text();
     var desc = $(this).find('span').text();
     desc = desc.split(" ");
-    desc = parseInt(desc[0]);
+    vagas = parseInt(desc[0]);
 
-    if (desc > 100){
-      list.push({title: title, desc: desc});
-      total += desc;
+    if (vagas > 100){
+      list.push({title: title, vagas: vagas});
+      total += vagas;
     }
   });
 
-  list = list.sort(function (a, b) { return b.desc - a.desc; });
+  list = list.sort(function (a, b) { return b.vagas - a.vagas; });
 
   for (var i in list){
-    var percent = list[i].desc / total * 100;
+    var percent = list[i].vagas / total * 100;
     percent = percent.toPrecision(2);
 
-    console.log(i + " " + list[i].title + " -  " + list[i].desc + " vagas >> " + percent + "%");
+    console.log(i + " " + list[i].title + " -  " + list[i].vagas + " vagas >> " + percent + "%");
   }
 
   console.log("Total: " + total + " vagas");
