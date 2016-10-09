@@ -3,6 +3,10 @@ var cheerio = require('cheerio');
 var express = require('express');
 var app = express();
 
+// set the port of our application
+// process.env.PORT lets the port be set by Heroku
+var port = process.env.PORT || 8080;
+
 function getRequest(response){
   request('http://www.catho.com.br/vagas/por-cargo/view/profissional/51/', function(err, res, body) {
     if (err) console.log('Erro: ' + err);
@@ -42,6 +46,6 @@ app.get('/', function (req, response) {
   getRequest(response);
 });
 
-app.listen(3000, function () {
-  console.log('App listening on port 3000!');
+app.listen(port, function () {
+  console.log('App listening on port ' + port + '!');
 });
