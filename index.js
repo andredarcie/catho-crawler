@@ -32,12 +32,13 @@ function getRequest(response){
 
       response.write("<li> " + i + " " + list[i].title + " -  " + list[i].vagas + " vagas >> " + percent + "% </li>");
     }
-    response.end("Total: " + total + " vagas");
+    response.end("</ul> Total: " + total + " vagas");
   });
 }
 
 app.get('/', function (req, response) {
   response.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
+  response.write("<ul>");
   getRequest(response);
 });
 
