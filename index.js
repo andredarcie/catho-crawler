@@ -38,7 +38,7 @@ function getRequest(response){
 
 app.get('/', function (req, response) {
   response.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
-  response.write("<ul>");
+  response.write("<h2>Catho Crawler</h2><ul>");
   getRequest(response);
 });
 
