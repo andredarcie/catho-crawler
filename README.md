@@ -7,7 +7,7 @@ NodeJS Crawler for [Catho](http://www.catho.com.br/vagas/por-area/).
 
 You can clone from github:
 
-    git clone git@github.com:andrendarcie/catho-crawler.git
+    git clone git@github.com:andredarcie/catho-crawler.git
 
     cd catho-crawler
 
