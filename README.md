@@ -1,6 +1,6 @@
 # Catho Crawler
 
-NodeJS Crawler for [Catho](http://www.catho.com.br/vagas/por-area/).     
+NodeJS Crawler for [Catho](http://www.catho.com.br/vagas/por-area/) based on request and cheerio.     
 - Available in: [Heroku](https://catho-crawler.herokuapp.com/)
 
 ## Setup
